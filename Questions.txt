@@ -1,0 +1,61 @@
+● What is Emmet?
+- Emmet is a tool that helps you write HTML and CSS faster. It's a plugin for text editors that allows you to use abbreviations to expand into complex code snippets. For example, 
+you can type ul>li*3 and then hit the tab key to expand it into a list with three list items:
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+
+● Difference between a Library and Framework?
+- A library is a collection of code that you can use to perform specific tasks. You can think of a library as a toolbox that contains a set of tools (in this case, code) that you can use to perform various tasks. You can use these tools individually or in combination to build something new.
+A framework, on the other hand, is a set of conventions and standards for building applications. It provides a structure that you can follow to build your application, rather than a set of tools that you can use to build whatever you want. A framework defines the way that an application should be built, and you build your application by following that structure and filling in the details.
+In summary, a library is a collection of code that you can use to perform specific tasks, while a framework is a set of conventions and standards for building applications that you follow to build your application.
+
+
+● What is CDN? Why do we use it?
+- Content Delivery Network (CDN) is a distributed network of servers that delivers web content to users based on their geographic location. CDN is used to improve the performance and availability of web-based applications by reducing the distance between the user and the server.
+CDN works by storing copies of static content, such as images, stylesheets, and JavaScript files, on a network of servers located in different parts of the world. When a user requests a web page, the CDN routes the request to the server that is geographically closest to the user, which results in faster delivery of the content.
+
+
+● Why is React known as React?
+- React is a JavaScript library for building user interfaces, and it is known as React because it was designed to help developers build reusable components that can be quickly rendered and updated.
+The name "React" is short for "responsive," which refers to the way that React components can automatically update when the data they depend on changes. This is achieved through the use of a virtual DOM (Document Object Model), which allows React to efficiently update the actual DOM without having to rebuild the entire tree.
+
+
+● What is crossorigin in script tag?
+- The crossorigin attribute is used in the script tag to specify how a script should be loaded when it is being used in a cross-origin resource sharing (CORS) scenario.
+When a script is loaded from a different domain than the one that served the web page, it is considered a cross-origin resource. Browsers implement security measures to prevent web pages from making requests to a different domain, unless the server specifically allows it through the use of CORS headers.
+The crossorigin attribute can be used to specify the CORS behavior of a script. It can have the following values:
+anonymous: This tells the browser to send a CORS request with an Origin header, but without any credentials (such as cookies or HTTP authentication).
+use-credentials: This tells the browser to send a CORS request with an Origin header and with credentials.
+By default, the crossorigin attribute is not set, which means that the browser will not send a CORS request when loading the script.
+
+
+● What is diference between React and ReactDOM
+- React is a JavaScript library for building user interfaces, while ReactDOM is a JavaScript library that provides the interface between React and the DOM (Document Object Model).
+React is designed to be used for building reusable components that can be rendered to the DOM. It provides a virtual DOM, which is a lightweight in-memory representation of the actual DOM. This allows React to efficiently update the actual DOM by only rendering the parts that have changed, rather than rebuilding the entire tree.
+ReactDOM is the bridge between React and the DOM. It provides a set of functions that allow React components to be rendered to the DOM, and it also provides functions for updating the DOM in response to changes in the state of the React components.
+In summary, React is the library for building reusable components, and ReactDOM is the library that provides the interface between React and the DOM. They are often used together when building web applications with React.
+
+
+● What is difference between react.development.js and react.production.js files via CDN?
+- react.development.js and react.production.js are two different versions of the React library that are optimized for different environments.
+react.development.js is the development version of the library, which is intended for use during the development process. It includes features such as a warning system that can help developers identify potential problems in their code, and it is also slower and larger than the production version.
+react.production.js is the production version of the library, which is optimized for performance and size. It does not include the warning system or other development-specific features, and it is smaller and faster than the development version.
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+
+
+● What is async and defer?
+- async and defer are attributes that can be used in the script tag to specify the loading behavior of a script.
+async tells the browser to load the script asynchronously, which means that it will load the script in the background while the rest of the page continues to load. This can improve the performance of the page by allowing it to load other resources while the script is being downloaded.
+defer tells the browser to load the script after the page has finished loading, but it will execute the script as soon as it has finished loading. This can be useful if you want to ensure that the script is executed after the page has finished loading, but you don't want to block the loading of other resources.
+Here is an example of using async and defer in a script tag:
+
+<script src="script.js" async></script>
+<script src="script.js" defer></script>
+
+In general, async is useful for scripts that do not need to be executed in a specific order, while defer is useful for scripts that need to be executed after the page has finished loading. However, it's important to note that defer is only supported by modern browsers and may not be available in all browsers.
+
